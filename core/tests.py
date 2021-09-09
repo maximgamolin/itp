@@ -15,6 +15,7 @@ class TestHttpOk(TestCase):
 
     def test_homepage(self):
         response = self.client.get(reverse('homepage'))
+        self.fail()
         self.assertEqual(response.status_code, 200)
 
     def test_post_detail(self):
