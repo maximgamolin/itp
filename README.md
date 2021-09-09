@@ -15,3 +15,7 @@
 создан суперпользователь
 логин: admin
 пароль: 1qaz2wsx3edc
+
+Запустить линтер
+
+    docker-compose up lint

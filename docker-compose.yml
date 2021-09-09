@@ -20,3 +20,9 @@ services:
     command: bash -c "python manage.py migrate && python manage.py loaddata fixtures.json"
     volumes:
       - .:/code
+
+  lint:
+    build: .
+    command: bash -c "pip install -r requirements-dev.txt && flake8 --max-line-length 120 --exclude migrations,venv,manage.py"
+    volumes:
+      - .:/code
